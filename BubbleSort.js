@@ -1,3 +1,10 @@
+
+/* 
+  最好时间复杂度 O(N)
+  平均时间复杂度 O(N^2)
+  最坏时间复杂度 O(N^2)
+*/
+
 function swap(arr, pos1, pos2) {
   /* 将 pos1位置 和 pos2位置 的元素互换*/
   const temp = arr[pos1];
@@ -5,7 +12,9 @@ function swap(arr, pos1, pos2) {
   arr[pos2] = temp;
 }
 
-function bubbleSort(arr) {
+
+//容易理解的实现
+function bubbleSortBasic(arr) {
   let len = arr.length;
   let i,
     j,
@@ -22,4 +31,28 @@ function bubbleSort(arr) {
       }
     }
   }
+  return arr;
 }
+
+
+//更常见的实现
+function bubbleSort(arr) {
+  let swaped;
+  do {
+    swaped = false;
+    for (var i = 0; i < arr.length; i++){
+      //这里必须用var，而不是let
+      if(arr[i] &&arr[i+1]&&arr[i]>arr[i+1] ){
+        swap(arr,i,i+1);
+        swaped=true;
+      }
+    }
+
+  } while (swaped)
+  return arr;
+}
+
+
+
+// 参考 http://blog.benoitvallon.com/sorting-algorithms-in-javascript/the-bubble-sort-algorithm/
+//     https://www.w3resource.com/javascript-exercises/javascript-function-exercise-24.php

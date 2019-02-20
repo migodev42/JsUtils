@@ -3,7 +3,7 @@ function binarySearch(arr,el) {
   二分查找
   arr 传入的有序数组 
   el 待查找的元素
-  时间复杂度 O(logN)
+  平均时间复杂度 O(logN)
 
 */
   let low = 0;
