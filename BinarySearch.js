@@ -8,8 +8,10 @@ function binarySearch(arr,el) {
 */
   let low = 0;
   let high = arr.length-1;
-  while(low <= high){
+
+  while(low <= high){   //循环直到范围缩小到：只包含一个元素
     let mid=Math.floor((high+low)/2);
+    
     if(arr[mid]===el){
       return mid;
     }
