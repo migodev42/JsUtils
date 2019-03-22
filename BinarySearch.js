@@ -24,3 +24,31 @@ function binarySearch(arr,el) {
   return -1
 
 }
+
+
+/* 递归版本 */
+function binarySearchR(arr,el){
+  let len =arr.length;
+  let mid=Math.floor(len/2);
+
+  if(arr[mid]===el){
+    return mid
+  }else if( el>arr[mid]){
+    return binarySearchR(arr.slice(mid+1),el)
+  }else if(el<arr[mid]){
+    return binarySearchR(arr.slice(0,mid),el)
+  }else{
+    return -1
+  }
+    
+  
+  
+}
+
+
+let arr=[1,2,3,5,7];
+let el= 5;
+console.log(binarySearchR(arr,el))
+
+// yuhang_ge@hansight.com
+// shihan_sun@hansight.com
