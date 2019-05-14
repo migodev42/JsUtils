@@ -1,3 +1,15 @@
+/* 
+markdown
+
+首先Costmer是一个Generator函数（注意！！ Producer不是Generator函数）
+
+- 向 ```Producer``` 传入一个 ``` Customer ```  
+- ``` Producer ``` 制造产品，``` Costmer ``` 随即消费产品，并yield一个状态码给到 ``` Producer ```  
+- ```Producer``` 接收到状态码，继续运行，打印出状态码
+- 根据 ```Flag``` ，继续下一轮生产/停止生产
+
+*/
+
 function* Customer() {
     let res;
     while (true) {
