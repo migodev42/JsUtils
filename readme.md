@@ -8,6 +8,7 @@
 - JsDate日期处理
 - Node单行输出（百分比、进度条）
 - Js判断UserAgent
+- react移动端滚屏组件
 
 
 ### 参考
