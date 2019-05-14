@@ -7,7 +7,7 @@
 - Js跨浏览器事件处理
 - JsDate日期处理
 - Node单行输出（百分比、进度条）
-[](https://github.com/LeoooY/JsUtils/blob/master/assets/img/nodeLogBar.png)
+![image](./assets/img/nodeLogBar.png)
 - Js判断UserAgent
 - react移动端滚屏组件
 
