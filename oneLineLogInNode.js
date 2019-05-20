@@ -78,4 +78,4 @@ while(read<1000000){
 /************************/
 
 
-module.export={ProgressBar}
+module.exports={ProgressBar}
