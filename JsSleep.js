@@ -11,7 +11,7 @@ async function run(){
   console.log(2)
 }
 
-run();
+// run();
 
 /* 
   原理：
@@ -19,3 +19,5 @@ run();
   (await 等待Promise状态改变后，再继续执行当前主线程，理解为await阻塞异步操作，与Promise的then基本等价)
   另：Promise的
 */
+
+module.exports={sleep};
