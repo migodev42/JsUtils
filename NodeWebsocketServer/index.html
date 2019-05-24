@@ -24,7 +24,7 @@
     }
 
     function get20Msgs(){
-      ws.send('data')
+      ws.send(JSON.stringify({signal:'data'}))
     }
   </script>
 </body>

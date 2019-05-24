@@ -18,15 +18,6 @@ wsServer.on('connection',async function(ws){
       console.log('收到一条消息');
     }
   })
-
-  async function send20Msg(){
-    for(let i=1;i<20;i++){      
-      ws.send(`这是服务器传来的第 ${i} 消息，nice!`)
-      await sleep(3000);
-    }
-  }
-  
-  
 })
 
 
