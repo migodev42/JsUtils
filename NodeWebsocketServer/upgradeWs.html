@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>upgrade to websocket through http</title>
+</head>
+<body>
+  <h2>upgrade to websocket through http</h2>
+  <script>
+    // const SecWebsocketVersion=13;
+    // const SecWebsocketKey='dGhlIHNhbXBsZSBub25jZQ==';//随机生成的Base64编码字符串
+
+    // const fetchParam={      
+    //   method:'get',
+    //   Host:'localhost',
+    //   headers:{
+        
+    //     'Upgrade':'websocket',
+    //     'Connection':'Upgrade',
+    //     "Sec-Websocket-Key":SecWebsocketKey,
+    //     "Sec-Websocket-Version":13,
+    //   }
+    // }
+    // fetch('http://localhost:3000/switchToWs',fetchParam).then(r=>{
+    //   console.log(r);
+    //   // return r.json();
+    // }).then(d=>{
+    //   // console.log(d);
+    // })
+
+    
+    const ws=new WebSocket('ws://localhost:3000');
+    ws.addEventListener('open',function(){
+      console.log('ws 连接已建立');
+    })
+
+  </script>
+</body>
+</html>
