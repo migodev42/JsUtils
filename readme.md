@@ -11,6 +11,8 @@
 - Js判断UserAgent
 - react移动端滚屏组件
 - nodeCluster
+- JsDebounce 函数防抖(Simple 版本)
+- JsThrottle 函数节流(时间戳版本 定时器版本)
 
 
 ### 参考
@@ -20,3 +22,4 @@
 - 《算法图解》
 - [《Js高级程序设计》 第三版]()
 - [single-line-log | npm](https://www.npmjs.com/package/single-line-log)
+- [lodash](https://www.lodashjs.com/)
