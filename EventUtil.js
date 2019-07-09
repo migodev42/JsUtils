@@ -5,7 +5,7 @@
 
 const EventUtil = {
   /* 兼容 IE的事件处理 */
-
+	
   addHandler: function (elem, type, handler) {
     if (elem.addEventListener) {
       elem.addEventListener(type, handler, false);

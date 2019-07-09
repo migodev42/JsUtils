@@ -2,31 +2,39 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>websocket</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>websocket</title>
 </head>
 
 <body>
-  <h1>hello websocket</h1>
-  <button onclick="get20Msgs()">获取消息</button>
-  <div class="msgbox"></div>
-  <script>
-    const ws = new WebSocket('ws://127.0.0.1:3001');
-    ws.onopen = function () { 
-     console.log('客户端打开websocket连接');
-     ws.send('这是客户端传来的消息，nice!');
-    }; 
-    ws.onmessage = function (msg) {
-       console.log(msg);
-       document.querySelector('.msgbox').innerHTML=msg.data
-    }
+    <h1>hello websocket</h1>
+    <button onclick="get20Msgs()">获取消息</button>
+    <div class="msgbox">
+        <div></div>
+    </div>
+    <div>
+        <div></div>
+    </div>
 
-    function get20Msgs(){
-      ws.send(JSON.stringify({signal:'data'}))
-    }
-  </script>
+    <script>
+        const ws = new WebSocket('ws://127.0.0.1:3001');
+        ws.onopen = function () {
+            console.log('客户端打开websocket连接');
+            ws.send('这是客户端传来的消息，nice!');
+        };
+        ws.onmessage = function (msg) {
+            console.log(msg);
+            document.querySelector('.msgbox').innerHTML = msg.data
+        }
+
+        function get20Msgs() {
+            ws.send(JSON.stringify({ signal: 'data' }))
+        }
+    </script>
 </body>
 
 </html>

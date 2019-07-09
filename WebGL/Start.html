@@ -46,34 +46,34 @@
       gl.clear(gl.COLOR_BUFFER_BIT);
     }
 
-    function draw2DSquare(gl){
-      
-      const positionBuffer=gl.createBuffer();
-      gl.bindBuffer(gl.ARRAY_BUFFER,positionBuffer);
+    function draw2DSquare(gl) {
 
-      const positions=[
-        -1.0,1.0,
-         1.0,1.0,
-        -1.0,-1.0,
-        1.0,-1.0,
+      const positionBuffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+
+      const positions = [
+        -1.0, 1.0,
+        1.0, 1.0,
+        -1.0, -1.0,
+        1.0, -1.0,
       ]
     }
 
-    function initShaderProgram(gl,vsSource,fsSource){
+    function initShaderProgram(gl, vsSource, fsSource) {
 
     }
 
-    function loadShader(gl,type,shader){
-      
+    function loadShader(gl, type, shader) {
+
     }
 
     /* main */
     initWebGL('#webGLStarted').then(gl => {
       setBackground(gl);
-      
+
       // Vertex Shader Program
 
-      const vsSource=`
+      const vsSource = `
         attribute vec4 aVertexPosition;
 
         uniform mat4 uModelViewMatrix;
@@ -86,13 +86,13 @@
 
       // Fragment Shader Program 
 
-      const fsSource=`
+      const fsSource = `
         void main(){
           gl_FragColor=vec4(1.0,1.0,1.0,1.0);
         }
       `
 
-      const shaderProgram=initShaderProgram(gl,vsSource,fsSource)
+      const shaderProgram = initShaderProgram(gl, vsSource, fsSource)
 
 
 

@@ -11,6 +11,7 @@
 - Js判断UserAgent
 - react移动端滚屏组件
 - nodeCluster
+- JSClearAllTimers 清除所有定时器
 - JsDebounce 函数防抖(Simple 版本)
 - JsThrottle 函数节流(时间戳版本 定时器版本)
 
