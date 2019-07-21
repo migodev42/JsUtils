@@ -14,7 +14,11 @@
 - JSClearAllTimers 清除所有定时器
 - JsDebounce 函数防抖(Simple 版本)
 - JsThrottle 函数节流(时间戳版本 定时器版本)
+- JsRegExp/ Js常用正则表达式
 
+```
+edit from pad 
+```
 
 ### 参考
 - [Generator函数的异步应用](http://es6.ruanyifeng.com/?search=import&x=0&y=0#docs/generator-async)
