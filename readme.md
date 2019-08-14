@@ -15,6 +15,7 @@
 - JsDebounce 函数防抖(Simple 版本)
 - JsThrottle 函数节流(时间戳版本 定时器版本)
 - JsRegExp/ Js常用正则表达式
+- JsCheckType Js数据类型检查
 
 ```
 edit from pad 
