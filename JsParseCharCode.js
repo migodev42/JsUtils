@@ -15,8 +15,6 @@ const parse = (str) => {
 */
 
 
-parse(`1
-2
-3
-4`)
+parse(`1	2	3	4
+`)
 debugger;
