@@ -4,6 +4,16 @@ const parse = (str) => {
     }
 }
 
+/* 
+
+| platform | software | ascii| character |
+| - | - | -| - |
+|linux |wps |10 |\n |
+|linux |石墨 |10 |\n |
+
+
+*/
+
 
 parse(`1
 2
