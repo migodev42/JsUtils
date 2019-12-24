@@ -33,9 +33,7 @@ function quickSort(arr){
   }
 
   return quickSort(left).concat([pivot],quickSort(right));
-  
-
-  
+    
 }
 
 function quickSortPureES6(arr) {

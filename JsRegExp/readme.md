@@ -15,3 +15,11 @@ patern.test('17361130207')  // return true/false
 
 
 ```
+
+### 匹配中文/非中文
+
+```
+const reg=/[\u4e00-\u9fa5]+/g   <!-- 匹配中文 -->
+
+
+```

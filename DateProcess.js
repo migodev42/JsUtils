@@ -5,7 +5,7 @@ function handleDays(lastLoginTime){
     '昨天': 1,
     '7天内': 3,
     '7天前': 7,
-    '30天内': 15,
+    '15天前': 15,
     '30天前': 30
 }
 const d=new Date();
