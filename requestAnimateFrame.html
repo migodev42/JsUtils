@@ -14,22 +14,26 @@
             height: 500px;
             background: blue;
         }
+        .Button{
+            position: absolute;
+            right: 0;
+        }
     </style>
 </head>
 
 <body>
     <div class="Main"></div>
-    <button onclick="window.requestAnimationFrame(step);">点击进行动画</button>
+    <button onclick="window.requestAnimationFrame(step);" class="Button">点击进行动画</button>
 </body>
 <script>
     var start = null;
-    var element = document.getElementById('.Main');
+    var element = document.querySelector('.Main');
     element.style.position = 'absolute';
 
     function step(timestamp) {
         if (!start) start = timestamp;
         var progress = timestamp - start;
-        element.style.left = Math.min(progress / 10, 200) + 'px';
+        element.style.left = Math.min(progress / 10, 300) + 'px';
         if (progress < 2000) {
             window.requestAnimationFrame(step);
         }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="Main"></div>
+</body>
+<script id="worker" type="app/worker">
+    addEventListener('message', function (e) {
+        console.log('Worker recieved: ', e.data)
+        postMessage(`msgback from worker`);
+      }, false);
+</script>
+
+<script type="text/babel">
+    const blob = new Blob([document.querySelector('#worker').textContent]);
+    const url = window.URL.createObjectURL(blob);
+    const worker=new Worker(url)
+    
+    worker.onmessage = function (e) {
+        console.log('Main recieved:',e.data)
+        // worker.terminate()
+    };
+    worker.postMessage('hello from main');
+    const App=()=>{
+        const onClick=()=>{
+            console.log('Main: Send a msg');
+            worker.postMessage({type:'example'});
+        }        
+        return (
+            <div>
+                Try web worker with React
+                <div>
+                    <button onClick={onClick}>Send msg to Worker</button>
+                </div>
+            </div>
+        )
+    }
+
+    ReactDOM.render(<App/>,document.querySelector('.Main'));
+</script>
+</html>
