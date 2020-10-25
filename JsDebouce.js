@@ -40,3 +40,16 @@ function debounceMockLodash(func, wait) {
         }, wait)
     }
 }
+
+function debunceNode(func,wait){
+    let timer, callnow=true;
+    return function(...args){
+        if(timer) clearTimeout(timer);
+        callnow = !timer;        
+        timer = setTimeout(()=>{            
+            timer = null;
+        },wait);
+        
+        if(callnow) func.apply(this, args);
+    }
+}
